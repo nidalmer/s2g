@@ -182,15 +182,60 @@ function gMap () {
         });  
 	};
 }
+function serviceCarousel () {
+    if($('.owl-carousel-grid-four').length){
+        $('.owl-carousel-grid-four').owlCarousel({
+            dots: false,
+            loop:true,
+            margin:20,
+            nav:true,
+            navText: [
+                '<i class="fa fa-angle-left"></i>',
+                '<i class="fa fa-angle-right"></i>'
+            ],
+            autoplayHoverPause: false,
+            autoplay: 6000,
+            smartSpeed: 1000,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:2
+                },
+                800:{
+                    items:3
+                },
+                1024:{
+                    items:4
+                }
+            }
+        })
+    }
+}
+
 
 $(document).ready(function() {
 	bootstrapAnimatedLayer();
 	partnerCarousel();
+	serviceCarousel();
     gMap();
     scrollToTop();
     mainmenu();
     counter_number();
     accordion();
+    $(document).on('click', '.single-service-item', function() { 
+        $(this).removeClass('single-service-item').addClass('single-service-item-nothover');
+    });
+    $(document).on('click', '.single-service-item-nothover', function() { 
+        $(this).removeClass('single-service-item-nothover').addClass('single-service-item');
+    }); 
+    $(document).on('click', '.my-img-hover', function() { 
+        $(this).removeClass('my-img-hover').addClass('my-img-hovernot');
+    });
+    $(document).on('click', '.my-img-hovernot', function() { 
+        $(this).removeClass('my-img-hovernot').addClass('my-img-hover');
+    }); 
 });
 
 jQuery(window).on('scroll', function(){

@@ -112,12 +112,7 @@
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
                                     <li><a href="index.html">Home</a></li>
-                                    <li class="dropdown"><a href="about.html">ABOUT US</a>
-                                        <ul>
-                                            <li><a href="about.html">About Company</a></li>
-                                            <li><a href="team.html">Our Team</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="about.html">ABOUT US</a>
                                     <li><a href="services.html">Services</a></li>
                                     <li><a href="projects.html">Projects</a></li>
                                     <li class="current"><a href="contact.html">Contact Us</a></li>
@@ -156,6 +151,26 @@
                 </div>
             </div>
         </section>   
+        
+		<section class="map-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="big-title">
+                            <h2>Find us</h2>
+                        </div>
+						<div id="contact-google-map"
+						data-map-lat="33.958372"
+						data-map-lng="-118.341827"
+						data-map-zoom="12"
+						data-icon-path="assets/images/map-marker.png"
+						data-map-title="Hanoi"
+						data-markers="{&quot;marker-1&quot;: [33.958372, -118.341827, &quot;&lt;h4&gt;Main Head Office&lt;/h4&gt;&lt;p&gt;31 South Australia&lt;/p&gt;&quot;],		&quot;marker-2&quot;: [-38.021469, 145.118023, &quot;&lt;h4&gt;Branch Office&lt;/h4&gt;&lt;p&gt;31 Main Boulevar 33154&lt;/p&gt;&quot;]		}" class="google-map"></div>
+
+					</div>
+				</div>
+			</div>
+		</section>
 
 
 		<section class="contact_us-second">
@@ -164,7 +179,9 @@
 
 					<div class="col-md-8 col-sm-12 col-xs-12">
 						<header>
-							<h2>Contact us today</h2>
+							<div class="big-title">
+                                <h2>Contact us today</h2>
+                            </div>
 							<p>
 								For more information contact Rapid Nutrition’s Investor Relations team. We value your feedback and will respond to your question as quickly as possible. Alternatively click on the ‘chat box’ at the bottom right corner of your computer.
 							</p>
@@ -198,20 +215,22 @@
 								<div class="col-md-12">
 									<div class="form-grp">
 										<label>Message</label>
-										<textarea class="form-control" cols="40" rows="5" placeholder="Message" id="inputComments"></textarea>
+										<textarea cols="40" rows="5" placeholder="Message" id="inputComments"></textarea>
 										
 									</div>
 									
 								</div>
-								<button class="btn btn-default hvr-bounce-to-right" type="submit">
-											Send Message
-										</button>
+								<div class="col-md-12 button">
+                                    <a class="thm-button inverse hvr-bounce-to-right2" href="#">Send Message</a>
+                                </div>
 							</div>
 						</form>
 					</div>
 					<div class="col-md-4 col-sm-8 col-xs-12 keep-in">
 						<header>
-							<h2>Keep In Touch!</h2>
+							<div class="big-title">
+                                <h2>Keep in Touch</h2>
+                            </div>
 						</header>
 
 						<ul class="social-icons">
@@ -229,7 +248,10 @@
 							</li>
 						</ul>
 						<div class="contact-box">
-							<h2>Locations</h2>
+							
+							<div class="big-title">
+                                <h2>Locations</h2>
+                            </div>
 
 							<div class="address-box">
 								<div class="icon-box">
@@ -275,23 +297,6 @@
 				</div>
 			</div>
 		</section>
-        
-		<section class="map-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div id="contact-google-map"
-						data-map-lat="33.958372"
-						data-map-lng="-118.341827"
-						data-map-zoom="12"
-						data-icon-path="assets/images/map-marker.png"
-						data-map-title="Hanoi"
-						data-markers="{&quot;marker-1&quot;: [33.958372, -118.341827, &quot;&lt;h4&gt;Main Head Office&lt;/h4&gt;&lt;p&gt;31 South Australia&lt;/p&gt;&quot;],		&quot;marker-2&quot;: [-38.021469, 145.118023, &quot;&lt;h4&gt;Branch Office&lt;/h4&gt;&lt;p&gt;31 Main Boulevar 33154&lt;/p&gt;&quot;]		}" class="google-map"></div>
-
-					</div>
-				</div>
-			</div>
-		</section>
 
         <section class="contact-us">
 			<div class="container">
@@ -300,7 +305,7 @@
 						<h4>Have any question or need any business consultation?</h4>
 					</div>
 					<div class="col-md-3 button">
-						<a class="btn hvr-bounce-to-right" href="#">CONTACT US</a>
+						<a class="thm-button inverse hvr-bounce-to-right2" href="#">CONTACT US</a>
 					</div>
 				</div>
 			</div>

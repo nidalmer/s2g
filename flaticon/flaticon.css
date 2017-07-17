@@ -78,3 +78,44 @@ margin-left: 0px;
 
 .flaticon-flash:before { content: "\f100"; }
 .flaticon-wrench:before { content: "\f101"; }
+
+@font-face {
+  font-family: "Flaticon1";
+  src: url("./Flaticon-1.eot");
+  src: url("./Flaticon-1.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon-1.woff") format("woff"),
+       url("./Flaticon-1.ttf") format("truetype"),
+       url("./Flaticon-1.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon1";
+    src: url("./Flaticon-1.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon1-"]:before, [class*=" flaticon1-"]:before,
+[class^="flaticon1-"]:after, [class*=" flaticon1-"]:after {   
+  font-family: Flaticon1;
+        font-size: 20px;
+font-style: normal;
+margin-left: 0px;
+}
+
+.flaticon1-add:before { content: "\f100"; }
+.flaticon1-badge-with-a-star:before { content: "\f101"; }
+.flaticon1-chain-links:before { content: "\f102"; }
+.flaticon1-clock:before { content: "\f103"; }
+.flaticon1-construction-worker:before { content: "\f104"; }
+.flaticon1-hexagon-geometrical-shape-outline:before { content: "\f105"; }
+.flaticon1-left-quote:before { content: "\f106"; }
+.flaticon1-phone-call:before { content: "\f107"; }
+.flaticon1-placeholder:before { content: "\f108"; }
+.flaticon1-plus:before { content: "\f109"; }
+.flaticon1-right-quote:before { content: "\f10a"; }
+.flaticon1-search:before { content: "\f10b"; }
+.flaticon1-share:before { content: "\f10c"; }
+.flaticon1-tool:before { content: "\f10d"; }

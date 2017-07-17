@@ -87,6 +87,7 @@
   display: block;
 }
 
+
 /*** 
 =============================================
     About Company Area style
@@ -202,7 +203,7 @@
    Solution Single area  style
 =============================================
 ***/     
-#solution-single-area .single-solution-content .top {
+.services .single-solution-content .top {
   margin-bottom: 50px;
 }         
     
@@ -229,20 +230,9 @@
 }    
     
 
-
+ 
 /* Tablet Layout: 768px. */
-@media only screen and (min-width: 768px) and (max-width: 991px) {    
-    
-/*** 
-=============================================
-    Top bar Area style
-=============================================
-***/     
-.topbar .top-right {
-    float: none;
-    width: 175px;
-    margin: 20px auto 0;
-}      
+@media only screen and (min-width: 768px) and (max-width: 991px) {         
     
 /*** 
 =============================================
@@ -253,6 +243,14 @@
     margin: 0 0 25px;
     text-align: center;
 }    
+.header .header-right ul {
+    width: 100%;
+    margin: auto;
+    padding-left: 40px;
+}
+.header .button-wraper {
+    margin-right: 40%;
+}
     
 /*** 
 =============================================
@@ -263,7 +261,17 @@
 #main-carousel .slide-3 .carousel-caption .content {
     padding-left: 20px;
 } 
-    
+.choosing-area {
+    padding-top: 40px;
+    padding-bottom: 30px;
+} 
+.choosing-area .big-title {
+    padding-bottom: 30px;
+}
+.choosing-area .img-box {
+    content: hidden;
+    display: none;
+}
 /*** 
 =============================================
     Solution Area style
@@ -277,7 +285,23 @@
 .solution-area .solution-botton .single-item .text-holder {
     border: none;
 } 
-    
+/*** 
+=============================================
+    Facts  Area style
+=============================================
+***/    
+
+.section-facts {
+	padding-right: 0;
+}
+.section-facts .container {
+    width: 750px;
+}
+.section-facts .col-md-5.fact-summary.text-right {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 /*** 
 =============================================
     Latest Project Area style
@@ -390,12 +414,37 @@
     About Company Area style
 =============================================
 ***/      
-.about-company-area .text-holder {
-    margin-top: 25px;
-}   
-.about-company-area .bottom .single-item {
-    margin-bottom: 25px;
-}    
+.my-about-field-two .my-about-box-two {
+		margin-bottom: 50px;
+	}
+	.my-about-field-three .my-video-path .my-video-layer {
+	  position: absolute;
+	  top: 15%;
+	}
+	.my-img-hover-two .layer i::before {
+		font-size: 26px;
+	}
+	.my-img-hover-two .layer p {
+		margin-top: 0;
+	}
+	.my-main-header-three .my-main-nav .menuzord-brand {
+		display: block;
+		text-align: center;
+		float: none;
+		margin-right: 0;
+	}
+	.my-about-field-four .my-about-col h2 {
+		text-align: center;
+	}
+	.my-about-field-four .my-about-btn {
+		text-align: center;
+	}
+	.my-about-field-four .my-about-col .my-another-title h2 {
+		text-align: left;
+	}
+    .my-about-field-three .my-video-path img.backlayer {
+        margin-left: 10%;
+    }
     
 /*** 
 =============================================
@@ -535,55 +584,89 @@
    Solution Single area  style
 =============================================
 ***/
-#solution-single-area {
-    padding-top: 0px;
+.services {
+    padding-top: 40px;
+    padding-bottom: 0;
 }
-#solution-single-area .single-solution-content .top {
+.services .single-solution-content .top {
   margin-bottom: 20px;
 }    
-#solution-single-area .single-solution-content .top .img-holder {
+.services .big-title h2::before {
+    top: 80px;
+}
+.services .single-solution-content .top .img-holder {
   margin-right: 0;
   margin-bottom: 20px;
 }
-#solution-single-area .single-solution-content .top .img-holder img {
+.services .single-solution-content .top .img-holder img {
   width: 100%;
 }    
-#solution-single-area .single-solution-content .top .text-holder {
+.services .single-solution-content .top .text-holder {
   padding-left: 0;
 }      
-#solution-single-area .single-solution-content .bottom .img-holder {
+.services .single-solution-content .bottom .img-holder {
   margin-right: 0;
 }
-#solution-single-area .single-solution-content .bottom .img-holder img {
+.services .single-solution-content .bottom .img-holder img {
   width: 100%;
 }    
-#solution-single-area .single-solution-content .bottom .accordion-box {
+.services .single-solution-content .bottom .accordion-box {
   margin: 30px 0 0;
   padding-left: 0;
 }
-#solution-single-area .single-solution-content .experts-provide ~ .experts-provide {
+.services .single-solution-content .experts-provide ~ .experts-provide {
     padding-top: 0;
     padding-bottom: 20px;
 }
-#solution-single-area .single-solution-content .experts-provide .single-experts-provide{
+.services .single-solution-content .experts-provide .single-experts-provide{
     padding-bottom: 20px;
 }
-#solution-single-area .single-solution-content .caption-box .title {
+.services .single-solution-content .caption-box .title {
   float: none !important;
   text-align: center;
 }
-#solution-single-area .single-solution-content .caption-box .button {
+.services .single-solution-content .caption-box .button {
   float: none !important;
   margin: 10px 0 0;
   text-align: center;
-}    
-#solution-single-area .sidebar {
-  margin-top: 70px;
-}           
-#solution-single-area .single-solution-content .caption-box .button a{
+} 
+.services .sidebar .single-sidebar-item {
+    margin-bottom: 30px;
+}          
+.services .big-title {
+    margin-bottom: 30px;
+}
+.services .single-solution-content .caption-box {
+    margin-bottom: 30px;
+}
+.services .single-solution-content .caption-box .button a{
     margin: 0;
 }
+.services .single-service-item .img-holder, .services .single-service-item-nothover .img-holder {
+    max-height: 129px;
+}
+#solution-single-area .single-service-item .img-holder, #solution-single-area .single-service-item-nothover .img-holder {
+    max-height: 200px;
+}
+#solution-single-area .single-service-item, #solution-single-area .single-service-item-nothover {
+    padding-bottom: 20px;
+}
+.overlay .box .content p {
+    font-size: 12px;
+    line-height: 15px;
+}
 
+.contact_us-second .contact-form .button {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact_us-second .contact-form .button .thm-button.inverse{
+    margin-top: 0;
+    margin-right: 0;
+}
+.services .single-service-item .img-holder, .services .single-service-item-nothover .img-holder {
+    height: 127px;
+}
    
     
     
@@ -639,7 +722,6 @@
 }   
 .main-menu .collapse.in, 
 .main-menu .collapsing {
-    border: 2px solid #fdc900;
     border-radius: 3px;
     margin: 0 0 20px;
     padding: 0;
@@ -723,14 +805,14 @@
 .main-menu .navbar-collapse > .navigation > li,
 .main-menu .navbar-collapse > .navigation > li > ul > li,
 .main-menu .navbar-collapse > .navigation > li > ul > li > ul > li{
-    border-top: 2px dashed #fdc900 !important;
+    border-top: 1px solid #fdc900 !important;
     opacity:1 !important;
     top:0px !important;
     left:0px !important;
     visibility:visible !important;
 }
-.main-menu .navbar-collapse > .navigation > li:first-child{
-    border-top: 2px solid #fdc900 !important;
+.main-menu .navbar-collapse > .navigation > li:first-child {
+    border-top: none !important;
 }
 .main-menu .navbar-collapse > .navigation > li > a,
 .main-menu .navbar-collapse > .navigation > li > ul > li > a,
@@ -739,6 +821,7 @@
     line-height:22px;
     color:#fff;
     text-align:left;
+    font-weight: 300;
 }  
 .main-menu .navbar-collapse > .navigation > li > ul > li > a{        
     margin-left: 50px;
@@ -914,6 +997,10 @@
     Welcome Area style
 =============================================
 ***/     
+.welcome {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
 .welcome .welcome-content .title, .welcome .welcome-content .text {
     display: block;
     text-align: justify;
@@ -936,8 +1023,38 @@
 }   
 .welcome .welcome-content .title h1 {
     font-size: 30px;
-}    
+}  
 
+/*** 
+=============================================
+   ChoosingArea style
+=============================================
+***/     
+.choosing-area {
+    padding-top: 40px;
+    padding-bottom: 30px;
+} 
+.choosing-area .big-title {
+    padding-bottom: 30px;
+}
+.choosing-area .img-box {
+    content: hidden;
+    display: none;
+}
+.choosing-area .content ul li .icon-holder {
+    top: 40%;
+}
+.choosing-area .content ul li {
+    margin-bottom: 20px;
+}
+.choosing-area .content ul p {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d4d4d4;
+}
+.choosing-area .content .choosing-ul li:last-child p {
+    padding-bottom: 0;
+    border-bottom: none;
+}
 /*** 
 =============================================
     Solution Area style
@@ -957,6 +1074,7 @@
     margin: 0 0 4px;
     font-size: 15px;
 }  
+
     
 /*** 
 =============================================
@@ -973,16 +1091,80 @@
     About Industry Area style
 =============================================
 ***/      
-.about-industry-area .img-holder {
-    margin-right: 0;
-}    
-.about-industry-area .text-holder {
-    margin-left: 0;
-    margin-top: 20px;
-}    
-.about-industry-area #quote-form {
-    margin-top: 40px;
-}    
+	.my-about-field {
+        padding-top: 30px;
+		padding-bottom: 0;
+		text-align: center;
+	}
+    .my-about-field .my-about-col h1 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+	.my-about-field .hexagon {
+		margin: 0 auto;
+	}
+	.my-about-field .my-about-box {
+		padding-left: 0px;
+	}
+	.my-about-field .my-hexagon-box {
+		position: relative;
+		margin-bottom: 60px;
+	}
+	.my-features-field {
+		margin-top: 0;
+	}
+	.my-box-pad-less {
+	  padding: 0 15px;
+	}
+	.my-about-field-two {
+		text-align: left;
+	}
+	.my-img-over-box {
+		display: none;
+	}  
+    .my-about-field-three .my-video-path .my-video-layer {
+        left: 25%;
+        top: 60%
+    }
+    .my-about-field .my-about-col p {
+        text-align: justify;
+        margin-bottom: 30px;
+    }
+    .my-about-field .my-about-col {
+        margin-bottom: 0;
+    }
+    .my-about-field .my-about-col .my-about-box p {
+        text-align: center;
+    }
+    .my-service-field .big-title h2::before {
+        top: 40px;
+    }
+    .my-service-field{
+        padding: 0 0 30px;
+    }
+    .my-service-field p {
+        text-align: justify;
+    }
+    .my-about-field-three .my-video-path img, .my-about-field-three .my-video-path .my-video-layer img {
+        width: 100%;
+        height: 100%;
+    }
+    .my-layer-black {
+        padding-bottom: 140px;
+        padding-top: 40px;
+    }
+    .my-accordion .panel .panel-title a {
+        font-size: 13px;
+    }
+    .my-accordion .panel-group .panel-heading+.panel-collapse>.panel-body p {
+        font-size: 12px;
+    }
+    .my-accordion .panel-body {
+        padding: 0;
+    }
+    .my-about-box {
+    margin-bottom: 45px;
+    }
     
 /*** 
 =============================================
@@ -1332,69 +1514,109 @@
    Solution Single area  style
 =============================================
 ***/
-#solution-single-area {
+.services {
   padding-top: 0;
   padding-bottom: 20px;
 }  
-#solution-single-area .single-solution-content .top {
+.services .single-solution-content .top {
   margin-bottom: 20px;
 }    
-#solution-single-area .single-solution-content .top .img-holder {
+.services .single-solution-content .top .img-holder {
   margin-right: 0;
   margin-bottom: 20px;
 }
-#solution-single-area .single-solution-content .top .img-holder img {
+.services .single-solution-content .top .img-holder img {
   width: 100%;
 }    
-#solution-single-area .single-solution-content .top .text-holder {
+.services .single-solution-content .top .text-holder {
   padding-left: 0;
   padding-top: 0;
 }    
        
-#solution-single-area .single-solution-content .bottom .img-holder {
+.services .single-solution-content .bottom .img-holder {
   margin-right: 0;
 }
-#solution-single-area .single-solution-content .bottom .img-holder img {
+.services .single-solution-content .bottom .img-holder img {
   width: 100%;
 }    
-#solution-single-area .single-solution-content .bottom .accordion-box {
+.services .single-solution-content .bottom .accordion-box {
   margin: 30px 0 0;
   padding-left: 0;
 }
-#solution-single-area .single-solution-content .experts-provide ~ .experts-provide {
+.services .single-solution-content .experts-provide ~ .experts-provide {
     padding-top: 0;
     padding-bottom: 20px;
 }
-#solution-single-area .single-solution-content .experts-provide .single-experts-provide {
+.services .single-solution-content .experts-provide .single-experts-provide {
     padding-bottom: 20px;
 }
-#solution-single-area .single-solution-content .caption-box .title {
+.services .single-solution-content .caption-box .title {
   float: none !important;
   text-align: center;
 }
-#solution-single-area .single-solution-content .caption-box .button {
+.services .single-solution-content .caption-box .button {
   float: none !important;
   margin: 10px 0 0;
   text-align: center;
 }    
-#solution-single-area .sidebar {
+.services .sidebar {
   margin-top: 30px;
 }            
-#solution-single-area .sidebar .single-sidebar-item {
+.services .sidebar .single-sidebar-item {
   margin-bottom: 30px;
 }
-#solution-single-area .single-solution-content .experts-provide .single-experts-provide .text-holder {
+.services .single-solution-content .experts-provide .single-experts-provide .text-holder {
   padding-left: 30px;
   padding-right: 0;
 }    
-#solution-single-area .single-solution-content .caption-box .button a {
+.services .single-solution-content .caption-box .button a {
     margin: 0;
 }
 .accordion-box .accordion .accord-btn h4 {
     font-size: 16px;
 }
-.services .single-service-item {
+.services .single-service-item,  .services .single-service-item-nothover {
     padding-bottom: 20px;
+}
+.services {
+    padding-top: 20px;
+}
+.services .big-title h2:before {
+    top: 60px;
+}
+.overlay .box .content p {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.contact_us-second .contact-form .button {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contact_us-second .contact-form .button .thm-button.inverse{
+    margin-top: 0;
+    margin-right: 0;
+}
+.section-facts {
+    padding-right: 0;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.section-facts .col-md-5.fact-summary.text-right {
+    text-align: center;
+}
+.section-facts .fs-title {
+    font-size: 27px;
+}
+.section-facts .button-wraper {
+    margin-bottom: 20px;
+}
+.section-facts .text-center.fact-area.col-xs-4.epd-x {
+    width: 100%;
+    margin-top: 30px;
+}
+.section-facts .sf-icon-area {
+    height: 80px;
 }
 
     
@@ -1457,5 +1679,13 @@
     }
     .welcome p {
         text-align: justify;
+    }
+    .services .single-service-item .img-holder, .services .single-service-item-nothover .img-holder {
+        max-height: 170px;
+    }
+
+    .overlay .box .content p {
+        font-size: 12px;
+        line-height: 15px;
     }
 }
