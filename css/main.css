@@ -679,7 +679,7 @@ ul, li {
   vertical-align: middle;  
 }
 .overlay .box .content p, .overlay .box .content a {
-  padding: 9.5px 24px;
+  padding: 2%;
   -webkit-transform: translate3d(0px, -75px, 0px);
   transform: translate3d(0px, -75px, 0px);
   -webkit-transition: all 0.4s ease 0s !important;
@@ -687,7 +687,9 @@ ul, li {
   opacity: 0;
   color: #fff;
 }
-
+.overlay .box .content a {
+    padding: 2% 4%;
+}
 .services .single-service-item:hover .img-holder .overlay {
   background-color: rgba(1, 48, 94, 0.85);
 }

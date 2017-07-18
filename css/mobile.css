@@ -1042,10 +1042,16 @@
     display: none;
 }
 .choosing-area .content ul li .icon-holder {
-    top: 40%;
+    top: 5%;
+    left: 45%;
+}
+.choosing-area .content ul li .text-holder {
+    padding: 10% 5% 0;
+    text-align: center;
 }
 .choosing-area .content ul li {
     margin-bottom: 20px;
+    padding-left: 0;
 }
 .choosing-area .content ul p {
     padding-bottom: 20px;
@@ -1608,17 +1614,34 @@
 .section-facts .fs-title {
     font-size: 27px;
 }
-.section-facts .button-wraper {
-    margin-bottom: 20px;
+.fs-title:last-of-type {
+    margin-bottom: 15px;
 }
 .section-facts .text-center.fact-area.col-xs-4.epd-x {
     width: 100%;
     margin-top: 30px;
 }
 .section-facts .sf-icon-area {
-    height: 80px;
+    height: 0;
+    text-align: left;
 }
-
+.section-facts .single-fact .sf-icon:before {
+    font-size: 40px;
+    padding-left: 7%;
+}
+.sf-icon-area span:after {
+    font-size: 80px;
+}
+.fact-heading, .fact-title {
+    text-align: right;
+}
+.single-fact span {
+    padding-top: 9%;
+}
+.single-fact {
+    padding-left: 10%;
+    padding-right: 10%;
+}
     
     
     
