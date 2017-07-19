@@ -214,16 +214,138 @@ function serviceCarousel () {
     }
 }
 
+function galleryMasonaryLayout() {
+    if ($('.masonary-layout').length) {
+        $('.masonary-layout').isotope({
+            layoutMode: 'masonry'
+        });
+    }
+
+    if ($('.post-filter').length) {
+        $('.post-filter li').children('span').on('click', function() {
+            var Self = $(this);
+            var selector = Self.parent().attr('data-filter');
+            $('.post-filter li').children('span').parent().removeClass('active');
+            Self.parent().addClass('active');
+
+
+            $('.filter-layout').isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 500,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+    }
+
+    if ($('.post-filter.has-dynamic-filter-counter').length) {
+        // var allItem = $('.single-filter-item').length;
+
+        var activeFilterItem = $('.post-filter.has-dynamic-filter-counter').find('li');
+
+        activeFilterItem.each(function() {
+            var filterElement = $(this).data('filter');
+            console.log(filterElement);
+            var count = $('.gallery-content').find(filterElement).length;
+
+            $(this).children('span').append('<span class="count"><b>' + count + '</b></span>');
+        });
+    };
+}
+
+// Project Images Carousel Slider
+
+function projectCarousel () {
+if ($('.project-images .image-carousel').length && $('.project-images .thumbs-carousel').length) {
+
+		var $sync1 = $(".project-images .image-carousel"),
+			$sync2 = $(".project-images .thumbs-carousel"),
+			flag = false,
+			duration = 500;
+
+			$sync1
+				.owlCarousel({
+					loop:false,
+					items: 1,
+					margin: 0,
+					nav: false,
+					navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
+					dots: false,
+					autoplay: true,
+					autoplayTimeout: 5000
+				})
+				.on('changed.owl.carousel', function (e) {
+					if (!flag) {
+						flag = false;
+						$sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
+						flag = false;
+					}
+				});
+
+			$sync2
+				.owlCarousel({
+					loop:false,
+					margin: 20,
+					items: 1,
+					nav: true,
+					navText: [ '<span class="fa fa-long-arrow-left"></span>', '<span class="fa fa-long-arrow-right"></span>' ],
+					dots: false,
+					center: false,
+					autoplay: true,
+					autoplayTimeout: 5000,
+					responsive: {
+						0:{
+				            items:2,
+				            autoWidth: false
+				        },
+				        400:{
+				            items:2,
+				            autoWidth: false
+				        },
+				        600:{
+				            items:3,
+				            autoWidth: false
+				        },
+				        900:{
+				            items:5,
+				            autoWidth: false
+				        },
+				        1000:{
+				            items:4,
+				            autoWidth: false
+				        }
+				    },
+				})
+				
+		.on('click', '.owl-item', function () {
+			$sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+		})
+		.on('changed.owl.carousel', function (e) {
+			if (!flag) {
+				flag = true;		
+				$sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
+				flag = false;
+			}
+		});
+
+	}
+}
+	
 
 $(document).ready(function() {
 	bootstrapAnimatedLayer();
 	partnerCarousel();
 	serviceCarousel();
+	projectCarousel();
     gMap();
     scrollToTop();
     mainmenu();
     counter_number();
     accordion();
+    galleryMasonaryLayout();
     $(document).on('click', '.single-service-item', function() { 
         $(this).removeClass('single-service-item').addClass('single-service-item-nothover');
     });
@@ -235,6 +357,12 @@ $(document).ready(function() {
     });
     $(document).on('click', '.my-img-hovernot', function() { 
         $(this).removeClass('my-img-hovernot').addClass('my-img-hover');
+    }); 
+    $(document).on('click', '.single-project', function() { 
+        $(this).removeClass('single-project').addClass('single-project-not');
+    });
+    $(document).on('click', '.single-project-not', function() { 
+        $(this).removeClass('single-project-not').addClass('single-project');
     }); 
 });
 

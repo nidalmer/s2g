@@ -287,6 +287,27 @@
 } 
 /*** 
 =============================================
+    project area style
+=============================================
+***/ 
+#project-area {
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.project-filter {
+  margin-bottom: 40px;
+}    
+.project-filter li {
+  margin: 0 8px 10px;
+}    
+#project-area .post-pagination {
+    margin-top: 0;
+}
+.overlay-box .box .content {
+    padding-bottom: 10%;
+}
+/*** 
+=============================================
     Facts  Area style
 =============================================
 ***/    
@@ -591,12 +612,16 @@
 .services .single-solution-content .top {
   margin-bottom: 20px;
 }    
+.services .single-solution-content .top .text-holder p {
+    font-size: 15px;
+}
 .services .big-title h2::before {
     top: 80px;
 }
 .services .single-solution-content .top .img-holder {
   margin-right: 0;
   margin-bottom: 20px;
+  margin-top: 18%;
 }
 .services .single-solution-content .top .img-holder img {
   width: 100%;
@@ -606,12 +631,12 @@
 }      
 .services .single-solution-content .bottom .img-holder {
   margin-right: 0;
+  margin-top: 18%;
 }
 .services .single-solution-content .bottom .img-holder img {
   width: 100%;
 }    
 .services .single-solution-content .bottom .accordion-box {
-  margin: 30px 0 0;
   padding-left: 0;
 }
 .services .single-solution-content .experts-provide ~ .experts-provide {
@@ -666,6 +691,12 @@
 }
 .services .single-service-item .img-holder, .services .single-service-item-nothover .img-holder {
     height: 127px;
+}
+.sidebar-page-container {
+    padding: 30px 0 0;
+}
+.sidebar-page-container .sidebar .sidebar-widget {
+    margin-bottom: 25px;
 }
    
     
@@ -931,6 +962,25 @@
     margin: 0 auto 0;
     text-align: center;
 }    
+
+/*** 
+=============================================
+    project area style
+=============================================
+***/ 
+#project-area {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.project-filter {
+  margin-bottom: 20px;
+}    
+.project-filter li {
+  margin: 0 8px 10px;
+} 
+#project-area .post-pagination {
+    margin-top: 0;
+}
     
 /*** 
 =============================================
@@ -1146,7 +1196,8 @@
         top: 40px;
     }
     .my-service-field{
-        padding: 0 0 30px;
+        padding: 0 0 0;
+        margin-bottom: -10px;
     }
     .my-service-field p {
         text-align: justify;
@@ -1584,9 +1635,6 @@
 .services .single-service-item,  .services .single-service-item-nothover {
     padding-bottom: 20px;
 }
-.services {
-    padding-top: 20px;
-}
 .services .big-title h2:before {
     top: 60px;
 }
@@ -1613,6 +1661,9 @@
 }
 .section-facts .fs-title {
     font-size: 27px;
+}
+.section-facts .button-wraper {
+    margin-bottom: 10%;
 }
 .fs-title:last-of-type {
     margin-bottom: 15px;
@@ -1642,8 +1693,24 @@
     padding-left: 10%;
     padding-right: 10%;
 }
-    
-    
+.sf-icon-area {
+    margin-top: 20px;
+}
+.fact-heading {
+    font-size: 25px;
+}
+.fact-title {
+    font-size: 15px;
+}
+.my-technology-field img {
+    display: none;
+}   
+.sidebar-page-container {
+    padding: 30px 0 0;
+}
+.sidebar-page-container .sidebar .sidebar-widget {
+    margin-bottom: 25px;
+}
     
     
     
