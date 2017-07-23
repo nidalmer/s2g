@@ -134,41 +134,22 @@
                     </div>
                 </div>
             </div>
-            <div class="breadcrumb-botton">
+            <div class="breadcrumb-bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <ul class="left pull-left">
                                 <li><a href="index.html">Home</a></li>
                                 <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                                <li class="active">Contact Us</li>
-                            </ul>   
+                                <li class="active">Contact</li>
+                            </ul> 
                         </div>
                     </div>
                 </div>
             </div>
-        </section>   
+        </section> 
         
-		<section class="map-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="big-title">
-                            <h2>Find us</h2>
-                        </div>
-						<div id="contact-google-map"
-						data-map-lat="33.958372"
-						data-map-lng="-118.341827"
-						data-map-zoom="12"
-						data-icon-path="assets/images/map-marker.png"
-						data-map-title="Hanoi"
-						data-markers="{&quot;marker-1&quot;: [33.958372, -118.341827, &quot;&lt;h4&gt;Main Head Office&lt;/h4&gt;&lt;p&gt;31 South Australia&lt;/p&gt;&quot;],		&quot;marker-2&quot;: [-38.021469, 145.118023, &quot;&lt;h4&gt;Branch Office&lt;/h4&gt;&lt;p&gt;31 Main Boulevar 33154&lt;/p&gt;&quot;]		}" class="google-map"></div>
-
-					</div>
-				</div>
-			</div>
-		</section>
-
+		<div id="googleMap" style="height: 400px; width: 100%; background: grey"></div>
 
 		<section class="contact_us-second">
 			<div class="container">
@@ -308,11 +289,11 @@
 			</div>
 		</section>
 
-        <footer class="footer-area">
+        <footer class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget pd-bottom">
+                        <div class="footer-widget pd-bottom">
                             <div class="footer-logo">
                                 <a href="index.html">
                                 </a>
@@ -328,7 +309,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget pd-bottom">
+                        <div class="footer-widget pd-bottom">
                             <div class="title">
                                 <h3>Quick Links</h3>
                             </div>
@@ -349,7 +330,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                        <div class="single-footer-widget">
+                        <div class="footer-widget">
                             <div class="title">
                                 <h3>Get In Touch</h3>
                             </div>
@@ -407,9 +388,98 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD44pi19ZTfYcDgQlW3tSovbR1bTHnGAoo"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="js/owl.carousel.min.js"></script>  
+    <script>
+        function initialize() {
+            var farmgate = {
+                lat: 33.6835,
+                lng: -7.3849
+            };
+            var mapProp = {
+                center: new google.maps.LatLng(33.6835, -7.3849),
+                zoom: 15,
+                navigationControl: false,
+                mapTypeControl: false,
+                scaleControl: false,
+                draggable: true,
+                scrollwheel: false,
+                scrollwheel: 0,
+                navigationControl: 0,
+                mapTypeControl: false,
+                streetViewControl: false,
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                styles: [{
+                    "featureType": "landscape",
+                    "stylers": [{
+                        "color": "#f2f1f0"
+                    }, {
+                        "visibility": "on"
+                    }]
+                }, {
+                    "featureType": "poi",
+                    "stylers": [{
+                        "saturation": -100
+                    }, {
+                        "lightness": 51
+                    }, {
+                        "visibility": "simplified"
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "stylers": [{
+                        "color": "#f2f1f0"
+                    }, {
+                        "visibility": "on"
+                    }]
+                }, {
+                    "featureType": "road.arterial",
+                    "stylers": [{
+                        "color": "#fdc900"
+                    }, {
+                        "visibility": "on"
+                    }]
+                }, {
+                    "featureType": "road.local",
+                    "stylers": [{
+                        "color": "#fdc900"
+                    }, {
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "transit",
+                    "stylers": [{
+                        "saturation": -100
+                    }, {
+                        "visibility": "simplified"
+                    }]
+                }, {
+                    "featureType": "administrative.province",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "water",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "on"
+                    }, {
+                        "color": "#fdc900"
+                    }]
+                }]
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+            var marker = new google.maps.Marker({
+                position: farmgate,
+                map: map,
+                animation: google.maps.Animation.BOUNCE,
+                icon: 'img/location.png',
+            });
+            marker.addListener('click', toggleBounce);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     <script src="js/main.js"></script>
 </html>

@@ -72,18 +72,16 @@ function scrollToTop() {
 
 function accordion() {
     if($('.accordion-box').length){
-        $(".accordion-box").on('click', '.accord-btn', function() {
-
-            if($(this).hasClass('active')!==true){
-            $('.accordion .accord-btn').removeClass('active');
-
-            }
-
-            if ($(this).next('.accord-content').is(':visible')){
+        $('.accordion-box').on('click', '.accord-btn', function() {
+            if ($(this).hasClass('active')){
                 $(this).parent('.accordion-block').removeClass('active');
                 $(this).removeClass('active');
                 $(this).next('.accord-content').slideUp(500);
             }else{
+                $('.accordion').each(function(i, obj) {
+                    $(this).children('.accord-btn').removeClass('active');
+                    $(this).removeClass('active');
+                });
                 $(this).addClass('active');
                 $(this).parent('.accordion-block').addClass('active');
                 $('.accordion .accord-content').slideUp(500);
@@ -131,57 +129,6 @@ function partnerCarousel () {
     }
 }
 
-function gMap () {
-	if ($('.google-map').length) {
-        $('.google-map').each(function () {
-        	// getting options from html 
-        	var mapName = $(this).attr('id');
-        	var mapLat = $(this).data('map-lat');
-        	var mapLng = $(this).data('map-lng');
-        	var iconPath = $(this).data('icon-path');
-        	var mapZoom = $(this).data('map-zoom');
-            var mapTitle = $(this).data('map-title');
-        	var markers = $(this).data('markers');
-            var styles = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}];
-        	// if zoom not defined the zoom value will be 15;
-        	if (!mapZoom) {
-        		var mapZoom = 15;
-        	};
-        	// init map
-        	var map;
-            map = new GMaps({
-                div: '#'+mapName,
-                scrollwheel: false,
-                lat: mapLat,
-                lng: mapLng,
-                styles: styles,
-                zoom: mapZoom
-            });
-            // if icon path setted then show marker
-            if(iconPath) {
-        		$.each(markers, function (index, value) {
-                    var index = value;
-                    var html;
-                    if (index[2]) {
-                        html = index[2];
-                    };                    
-                    if (index[3]) {
-                        iconPath = index[3];
-                    };
-                    map.addMarker({
-                        icon: iconPath,                        
-                        lat: index[0],
-                        lng: index[1],
-                        infoWindow: {
-                          content: html
-                        }
-                    });   
-
-                });
-        	}
-        });  
-	};
-}
 function serviceCarousel () {
     if($('.owl-carousel-grid-four').length){
         $('.owl-carousel-grid-four').owlCarousel({
@@ -255,8 +202,6 @@ function galleryMasonaryLayout() {
         });
     };
 }
-
-// Project Images Carousel Slider
 
 function projectCarousel () {
 if ($('.project-images .image-carousel').length && $('.project-images .thumbs-carousel').length) {
@@ -340,30 +285,11 @@ $(document).ready(function() {
 	partnerCarousel();
 	serviceCarousel();
 	projectCarousel();
-    gMap();
     scrollToTop();
     mainmenu();
     counter_number();
     accordion();
     galleryMasonaryLayout();
-    $(document).on('click', '.single-service-item', function() { 
-        $(this).removeClass('single-service-item').addClass('single-service-item-nothover');
-    });
-    $(document).on('click', '.single-service-item-nothover', function() { 
-        $(this).removeClass('single-service-item-nothover').addClass('single-service-item');
-    }); 
-    $(document).on('click', '.my-img-hover', function() { 
-        $(this).removeClass('my-img-hover').addClass('my-img-hovernot');
-    });
-    $(document).on('click', '.my-img-hovernot', function() { 
-        $(this).removeClass('my-img-hovernot').addClass('my-img-hover');
-    }); 
-    $(document).on('click', '.single-project', function() { 
-        $(this).removeClass('single-project').addClass('single-project-not');
-    });
-    $(document).on('click', '.single-project-not', function() { 
-        $(this).removeClass('single-project-not').addClass('single-project');
-    }); 
 });
 
 jQuery(window).on('scroll', function(){
