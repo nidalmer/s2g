@@ -194,96 +194,196 @@ ul,li {
     Mainmenu
 ===============================================*/
 .menu {
-  background: #072d4d;
+    background: #072d4d;
 }
 .main-menu {
-  float: left;
-  position: relative;
-}
-.main-menu .navigation li {
-  display: inline-block;
-}
-.main-menu .navigation li a {
-  display: block;
-  line-height: 20px;
-  padding: 27px 20px 28px;
-  color: #fff;
-  position: relative;
-  text-transform: uppercase;
-  transition: all 500ms ease 0s;
-}
-.main-menu .navigation > li:hover > a, .main-menu .navigation > li.current > a {
-  color: #fdc900;
-}
-.main-menu .navigation > li > a:before {
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  height: 5px;
-  background: #fdc900;
-  content: "";
-  transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  -webkit-transition: all 500ms ease;
-  -ms-transition: all 500ms ease;
-  -o-transition: all 500ms ease;
-}
-.main-menu .navigation > li:hover a:before,.main-menu .navigation > li.current a:before {
-  width: 100%;
-}
-.main-menu .navigation > li > ul {
-  position: absolute;
-  left: 0px;
-  top: 130%;
-  width: 250px;
-  padding: 0px;
-  z-index: 100;
-  visibility: hidden;
-  opacity: 0;
-  background: #fdc900;
-  transition: all 500ms ease;
-}
-.main-menu .navigation > li:hover > ul {
-  top: 100%;
-  opacity: 1;
-  visibility: visible;
-}
-.main-menu .navigation > li > ul > li {
-  display: block;
-  float: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100%;
-}
-.main-menu .navigation > li > ul > li:last-child {
-  border-bottom: 4px solid #fdc900;
-}
-.main-menu .navigation > li:hover > ul {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translate3d(0px, 0, 0);
-  transform: translate3d(0px, 0, 0);
+    float: left;
+    position: relative;
 }
 .menu.stricky-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin: 0;
-  width: 100%;
-  z-index: 99999;
-  -webkit-animation-name: menu_sticky;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    z-index: 99999;
+    -webkit-animation-name: menu_sticky;
           animation-name: menu_sticky;
-  -webkit-animation-duration: 0.60s;
+    -webkit-animation-duration: 0.60s;
           animation-duration: 0.60s;
-  -webkit-animation-timing-function: ease-out;
+    -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
 }
 .menu.stricky-fixed .main-menu .navigation > li > a{
-  color: #fff;
+    color: #fff;
 }
+
 .main-menu .navbar-collapse {
-  padding: 0px
+    padding: 0px
+}
+.main-menu .navigation {
+  float: left;
+  margin: 0;
+  position: relative;
+}
+.main-menu .navigation li {
+    display: inline-block;
+}
+.main-menu .navigation li a {
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    opacity: 1;
+    padding: 27px 20px 28px;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 500ms ease 0s;
+}
+.main-menu .navigation > li:hover > a, 
+.main-menu .navigation > li.current > a {
+    color: #fdc900;
+}
+.main-menu .navigation > li > a:before{
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: #fdc900;
+    content: "";
+    transition:all 500ms ease;
+	-moz-transition:all 500ms ease;
+	-webkit-transition:all 500ms ease;
+	-ms-transition:all 500ms ease;
+	-o-transition:all 500ms ease;	
+}
+.main-menu .navigation > li:hover a:before,
+.main-menu .navigation > li.current a:before{
+    width: 100%;
+}
+.main-menu .navigation > li > ul {
+    position: absolute;
+    left: 0px;
+    top: 130%;
+    width: 250px;
+    padding: 0px;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    background: #fdc900;
+    transition: all 500ms ease;
+}
+.main-menu .navigation > li:hover > ul {
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+.main-menu .navigation > li > ul > li {
+    display: block;
+    float: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.main-menu .navigation > li > ul > li:last-child {
+    border-bottom: 4px solid #fdc900;
+}
+.main-menu .navigation .dropdown > ul {
+	position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  padding: 0;
+  
+  border: none;
+  border-radius: 0;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .4s ease;
+          transition: all .4s ease;
+  width: 270px;
+  background: #fdfdfd;
+  -webkit-transform: translate3d(-20px, 0, 0);
+          transform: translate3d(-20px, 0, 0);
+}
+.main-menu .navigation > li:hover > ul,
+.main-menu .navigation > .open > ul {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate3d(0px, 0, 0);
+          transform: translate3d(0px, 0, 0);
+}
+.main-menu .navigation .dropdown > ul > li > a {
+    display: block;
+    border-bottom:1px solid #ebebeb;
+    text-transform: capitalize;
+    color: #313131;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 12px 0px 12px 33px;
+    line-height: normal;
+    transition: all 0.4s ease 0s;
+    margin: 0;
+}
+.main-menu .navbar-collapse > ul li.dropdown .dropdown-btn {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  width: 34px;
+  height: 30px;
+  border: 2px solid #fdc900;
+  border-radius: 0px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 5;
+  display: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+.main-menu .navbar-collapse > ul li.dropdown .dropdown-btn .dropdown{
+  position: absolute;
+  right: 10px;
+  top: 6px;
+  width: 34px;
+  height: 30px;
+  border: 2px solid #fdc900;
+  border-radius: 0px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 5;
+  display: none;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+.main-menu .navbar-collapse > ul li.dropdown .dropdown-btn i {
+  color: #fdc900;
+  font-size: 15px;
+}
+.main-menu .navigation .dropdown > ul > li:last-child > a  {
+    border-bottom: none;
+}
+.main-menu .navigation .dropdown > ul > li > a:hover {
+    background: #fdc900;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 /*==============================================
