@@ -947,7 +947,7 @@ ul,li {
 .partners .partner .single-item:hover img {
   opacity: .6;
 }
-.partners .owl-controls {
+.partners .owl-nav {
   display: none;
 }
 .partners .big-title h2 {
@@ -2090,11 +2090,11 @@ ul,li {
   position: relative;
   padding: 0px 60px;
 }
-.project-detail .project-content .project-images .carousel-outer .thumbs-carousel .owl-controls {
+.project-detail .project-content .project-images .carousel-outer .thumbs-carousel .owl-nav {
   margin: 0px;
   padding: 0px;
 }
-.project-detail .project-content .project-images .carousel-outer .thumbs-carousel .owl-controls .owl-prev {
+.project-detail .project-content .project-images .carousel-outer .thumbs-carousel .owl-nav .owl-prev {
   position: absolute;
   left: 0px;
   top: 50%;
@@ -2102,7 +2102,7 @@ ul,li {
   color: #a8a8a8;
   background-color: transparent;
 }
-.project-detail .project-content .project-images .carousel-outer .thumbs-carousel .owl-controls .owl-next {
+.project-detail .project-content .project-images .carousel-outer .thumbs-carousel .owl-nav .owl-next {
   position: absolute;
   right: 0px;
   top: 50%;
@@ -2110,8 +2110,8 @@ ul,li {
   color: #a8a8a8;
   background-color: transparent;
 }
-.project-detail .project-content .project-images .carousel-outer .thumbs-carousel .owl-controls .owl-prev:hover,
-.project-detail .project-content .project-images .carousel-outer .thumbs-carousel .owl-controls .owl-next:hover {
+.project-detail .project-content .project-images .carousel-outer .thumbs-carousel .owl-nav .owl-prev:hover,
+.project-detail .project-content .project-images .carousel-outer .thumbs-carousel .owl-nav .owl-next:hover {
   color: #fde428;
 }
 .project-detail .project-content .section-title {

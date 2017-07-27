@@ -24,11 +24,8 @@ function bootstrapAnimatedLayer() {
 }
 
 function mainmenu() {
-	//Submenu Dropdown Toggle
 	if($('.main-menu li.dropdown ul').length){
 		$('.main-menu li.dropdown').append('<div class="dropdown-btn"><i class="fa fa-plus"></i></div>');
-		
-		//Dropdown Button
 		$('.main-menu li.dropdown .dropdown-btn').on('click', function() {
 			$(this).prev('ul').slideToggle(500);
 		});
@@ -37,13 +34,13 @@ function mainmenu() {
 }
 
 function counter_number() {
-		var timer = $('.timer');
-		if(timer.length) {
-			timer.appear(function () {
-				timer.countTo();
-			})
-		}
+	var timer = $('.timer');
+	if(timer.length) {
+		timer.appear(function () {
+			timer.countTo();
+		})
 	}
+}
 
 function stickyHeader() {
     var window_top = $(window).scrollTop();
@@ -61,7 +58,6 @@ function scrollToTop() {
     if ($('.scroll-to-target').length) {
         $(".scroll-to-target").on('click', function() {
             var target = $(this).attr('data-target');
-            // animate
             $('html, body').animate({
                 scrollTop: $(target).offset().top
             }, 1000);
@@ -73,11 +69,11 @@ function scrollToTop() {
 function accordion() {
     if($('.accordion-box').length){
         $('.accordion-box').on('click', '.accord-btn', function() {
-            if ($(this).hasClass('active')){
+            if ($(this).hasClass('active')) {
                 $(this).parent('.accordion-block').removeClass('active');
                 $(this).removeClass('active');
                 $(this).next('.accord-content').slideUp(500);
-            }else{
+            } else {
                 $('.accordion').each(function(i, obj) {
                     $(this).children('.accord-btn').removeClass('active');
                     $(this).removeClass('active');
@@ -174,8 +170,6 @@ function galleryMasonaryLayout() {
             var selector = Self.parent().attr('data-filter');
             $('.post-filter li').children('span').parent().removeClass('active');
             Self.parent().addClass('active');
-
-
             $('.filter-layout').isotope({
                 filter: selector,
                 animationOptions: {
@@ -189,96 +183,96 @@ function galleryMasonaryLayout() {
     }
 
     if ($('.post-filter.has-dynamic-filter-counter').length) {
-        // var allItem = $('.single-filter-item').length;
-
         var activeFilterItem = $('.post-filter.has-dynamic-filter-counter').find('li');
-
         activeFilterItem.each(function() {
             var filterElement = $(this).data('filter');
             console.log(filterElement);
             var count = $('.gallery-content').find(filterElement).length;
-
             $(this).children('span').append('<span class="count"><b>' + count + '</b></span>');
         });
     };
 }
 
 function projectCarousel () {
-if ($('.project-images .image-carousel').length && $('.project-images .thumbs-carousel').length) {
+    if ($('.project-images .image-carousel').length && $('.project-images .thumbs-carousel').length) {
 
 		var $sync1 = $(".project-images .image-carousel"),
 			$sync2 = $(".project-images .thumbs-carousel"),
 			flag = false,
-			duration = 500;
-
-			$sync1
-				.owlCarousel({
-					loop:false,
-					items: 1,
-					margin: 0,
-					nav: false,
-					navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
-					dots: false,
-					autoplay: true,
-					autoplayTimeout: 5000
-				})
-				.on('changed.owl.carousel', function (e) {
-					if (!flag) {
-						flag = false;
-						$sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
-						flag = false;
-					}
-				});
-
-			$sync2
-				.owlCarousel({
-					loop:false,
-					margin: 20,
-					items: 1,
-					nav: true,
-					navText: [ '<span class="fa fa-long-arrow-left"></span>', '<span class="fa fa-long-arrow-right"></span>' ],
-					dots: false,
-					center: false,
-					autoplay: true,
-					autoplayTimeout: 5000,
-					responsive: {
-						0:{
-				            items:2,
-				            autoWidth: false
-				        },
-				        400:{
-				            items:2,
-				            autoWidth: false
-				        },
-				        600:{
-				            items:3,
-				            autoWidth: false
-				        },
-				        900:{
-				            items:5,
-				            autoWidth: false
-				        },
-				        1000:{
-				            items:4,
-				            autoWidth: false
-				        }
-				    },
-				})
-				
-		.on('click', '.owl-item', function () {
-			$sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+            duration = 500;
+            
+		$sync1.owlCarousel({
+			loop:false,
+			items: 1,
+			margin: 0,
+			nav: false,
+			navText: [ '<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>' ],
+			dots: false,
+			autoplay: true,
+			autoplayTimeout: 5000
 		})
-		.on('changed.owl.carousel', function (e) {
+        .on('changed.owl.carousel', function (e) {
 			if (!flag) {
-				flag = true;		
-				$sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
 				flag = false;
-			}
-		});
+				$sync2.trigger('to.owl.carousel', [e.item.index, duration, true]);
+				flag = false;
+            }
+        });
 
+		$sync2.owlCarousel({
+			loop:false,
+			margin: 20,
+			items: 1,
+			nav: true,
+			navText: [ '<span class="fa fa-long-arrow-left"></span>', '<span class="fa fa-long-arrow-right"></span>' ],
+			dots: false,
+			center: false,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			responsive: {
+				0:{
+				    items:2,
+			        autoWidth: false
+			    },
+				400:{
+				    items:2,
+			        autoWidth: false
+			    },
+				600:{
+				    items:3,
+			        autoWidth: false
+			    },
+				900:{
+				    items:5,
+			        autoWidth: false
+				},
+				1000:{
+			        items:4,
+			        autoWidth: false
+				}
+			},
+		})		
+		.on('click', '.owl-item', function () {
+		    $sync1.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+		})
+        .on('changed.owl.carousel', function (e) {
+            if (!flag) {
+                flag = true;		
+                $sync1.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                flag = false;
+            }
+        });
 	}
 }
-	
+
+function enableNav () {
+    var carousel = $('.project-images .thumbs-carousel');
+    if (carousel.length) {
+        carousel.find('.owl-nav').removeClass('disabled');
+        carousel.find('.owl-prev').removeClass('disabled');
+        carousel.find('.owl-next').removeClass('disabled');;
+    }
+}
 
 $(document).ready(function() {
 	bootstrapAnimatedLayer();
@@ -290,6 +284,7 @@ $(document).ready(function() {
     counter_number();
     accordion();
     galleryMasonaryLayout();
+    enableNav();
 });
 
 jQuery(window).on('scroll', function(){
