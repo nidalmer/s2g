@@ -76,34 +76,6 @@
 
   /*** 
 =============================================
-    slogan Area style
-=============================================
-***/
-
-  /*** 
-=============================================
-    Footer Area style
-=============================================
-***/
-
-  /*** 
-=============================================
-    About Company Area style
-=============================================
-***/
-
-  .about-company-area .bottom .single-item .img-holder,  .about-company-area .bottom .single-item .text-holder {
-    display: block;
-    vertical-align: middle;
-  }
-
-  .about-company-area .bottom .single-item .text-holder {
-    padding-left: 0;
-    padding-top: 15px;
-  }
-
-  /*** 
-=============================================
     Fact counter Area style
 =============================================
 ***/
@@ -118,65 +90,7 @@
 
   /*** 
 =============================================
-    Blog Default Area style
-=============================================
-***/
-
-  /*** 
-=============================================
-    Checkout Area style
-=============================================
-***/
-
-  /*** 
-=============================================
-    Login Register Area style
-=============================================
-***/
-
-  /*** 
-=============================================
-    Shop Area style
-=============================================
-***/
-
-  .shop-area .shop-content {
-    border-right: none;
-    margin-right: 0;
-    padding-right: 0;
-    margin-top: 0;
-    padding-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 70px;
-  }
-
-  /*** 
-=============================================
-   Single Shop Area style
-=============================================
-***/
-
-  .single-shop-area .shop-content {
-    border-left: none;
-    margin-left: 0;
-    padding-left: 0;
-    margin-top: 0;
-    padding-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-
-  .single-shop-content .content-box {
-    margin-left: -85px;
-  }
-
-  .single-shop-content .img-holder {
-    margin-right: 85px;
-  }
-
-  /*** 
-=============================================
-   Solution Single area  style
+   Service Single area  style
 =============================================
 ***/
 
@@ -235,22 +149,6 @@
 
   /*** 
 =============================================
-    Solution Area style
-=============================================
-***/
-
-  .solution-area .solution-botton .single-item {
-    width: 100%;
-    border: 1px solid #f4f4f4;
-    margin-bottom: 25px;
-  }
-
-  .solution-area .solution-botton .single-item .text-holder {
-    border: none;
-  }
-
-  /*** 
-=============================================
     project area style
 =============================================
 ***/
@@ -294,17 +192,6 @@
     text-align: center;
     margin-bottom: 40px;
   }
-
-
-
-  /*** 
-=============================================
-    About Industry Area style
-=============================================
-***/
-
-
-
   /*** 
 =============================================
     Footer Area style
