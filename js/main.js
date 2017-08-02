@@ -113,12 +113,6 @@ function partnerCarousel () {
                 },
                 1024:{
                     items:4
-                },
-                1100:{
-                    items:4
-                },
-                1200:{
-                    items:5
                 }
             }
         });    		

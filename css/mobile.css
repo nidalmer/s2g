@@ -133,6 +133,10 @@
     padding-left: 20px;
   }
 
+  #main-carousel .carousel-caption .thm-container .box.valign-top .content {
+    min-width: 70%;
+  }
+
   .choose-us {
     padding-top: 40px;
     padding-bottom: 30px;
@@ -714,6 +718,7 @@
 
   #main-carousel .carousel-caption .thm-container .box.valign-top .content {
     padding-top: 160px;
+    min-width: 100%;
   }
 
   #main-carousel.ver_new_1_slider .carousel-control {
@@ -800,6 +805,85 @@
   .choose-us .content .choosing-ul li:last-child p {
     padding-bottom: 0;
     border-bottom: none;
+  }
+
+    /*** 
+=============================================
+    Values
+=============================================
+***/
+
+  .values {
+    padding-right: 0;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .values .col-md-5.fact-summary.text-right {
+    text-align: center;
+  }
+
+  .values .fv-title {
+    font-size: 27px;
+  }
+
+  .fv-title:last-of-type {
+    margin-bottom: 5%;
+  }
+
+  .values .button-wraper {
+    margin-bottom: 5%;
+  }
+
+  .fs-title:last-of-type {
+    margin-bottom: 15px;
+  }
+
+  .values .text-center.fact-area.col-xs-4.epd-x {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .values .sv-icon-area {
+    height: 0;
+    text-align: left;
+  }
+
+  .values .single-value .sv-icon:before {
+    font-size: 40px;
+    padding-left: 7%;
+  }
+
+  .sv-icon-area span:after {
+    font-size: 80px;
+  }
+
+  .value-heading, .value-title {
+    text-align: right;
+  }
+  .sv-icon-area {
+    height: 80px;
+  }
+
+  .single-value span {
+    padding-top: 9%;
+  }
+
+  .single-value {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .sv-icon-area {
+    margin-top: 20px;
+  }
+
+  .value-heading {
+    font-size: 25px;
+  }
+
+  .value-title {
+    font-size: 15px;
   }
 
   /*** 
@@ -1104,78 +1188,6 @@
   .contact_us-second .contact-form .button .thm-button.inverse {
     margin-top: 0;
     margin-right: 0;
-  }
-
-  .values {
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-top: 40px;
-  }
-
-  .values .col-md-5.fact-summary.text-right {
-    text-align: center;
-  }
-
-  .values .fs-title {
-    font-size: 27px;
-  }
-
-  .values .button-wraper {
-    margin-bottom: 10%;
-  }
-
-  .fs-title:last-of-type {
-    margin-bottom: 15px;
-  }
-
-  .values .text-center.fact-area.col-xs-4.epd-x {
-    width: 100%;
-    margin-top: 30px;
-  }
-
-  .values .sf-icon-area {
-    height: 0;
-    text-align: left;
-  }
-
-  .values .single-fact .sf-icon:before {
-    font-size: 40px;
-    padding-left: 7%;
-  }
-
-  .sf-icon-area span:after {
-    font-size: 80px;
-  }
-
-  .fact-heading,  .fact-title {
-    text-align: right;
-  }
-  .sv-icon-area {
-    height: 80px;
-  }
-
-  .single-fact span {
-    padding-top: 9%;
-  }
-
-  .single-fact {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
-  .sf-icon-area {
-    margin-top: 20px;
-  }
-
-  .fact-heading {
-    font-size: 25px;
-  }
-
-  .fact-title {
-    font-size: 15px;
-  }
-  .value-title {
-    margin-bottom: 25px;
   }
   .technology img {
     display: none;
