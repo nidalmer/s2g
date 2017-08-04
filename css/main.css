@@ -1873,10 +1873,9 @@ ul,li {
 .services .service-content .experts .experts-item .icon-holder span::before {
   background: #fdc716 none repeat scroll 0 0;
   border-radius: 50%;
-  color: #fff;
+  color: #000;
   display: block;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 40px;
   height: 70px;
   line-height: 70px;
   text-align: center;
@@ -1887,6 +1886,9 @@ ul,li {
 }
 .services .service-content .experts .experts-item .text-holder p {
   margin: 0;
+}
+.services .service-content .experts .experts-item .text-holder ul li span {
+  margin-right: 2%;
 }
 .services .service-content .caption-box {
   overflow: hidden;
@@ -1981,6 +1983,29 @@ ul,li {
   color: #9e9e9e;
   line-height: 24px;
   margin: 0px;
+  margin-bottom: 5px;
+  text-align: justify;
+}
+.services .accordion-box .accordion .accord-content ul li p {
+  text-align: left;
+}
+.services .accordion-box .accordion .accord-content ul li span.fa {
+  margin-right: 5px;
+  text-decoration: none;
+}
+.services .accordion-box .accordion .accord-content ul li span {
+  color: #072d4d;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.services .accordion-box .accordion .accord-content img {
+  max-width: 35%;
+  float: right;
+  margin: 0 0 0 2%;
+  max-height: 205px;
+}
+.services .accordion-box .accordion .accord-content.with-text img {
+  margin: 0 0 2% 5%;
 }
 
 /*=============================================

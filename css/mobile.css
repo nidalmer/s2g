@@ -1013,27 +1013,6 @@
     overflow: hidden;
   }
 
-  /*** 
-=============================================
-    About Company Area style
-=============================================
-***/
-
-  .about-company-area .text-holder {
-    margin-top: 20px;
-  }
-
-  .about-company-area .bottom .single-item {
-    margin-bottom: 25px;
-  }
-
-  .about-company-area .bottom .single-item .img-holder,  .about-company-area .bottom .single-item .text-holder {
-    display: block;
-  }
-
-  .about-company-area .bottom .single-item .text-holder {
-    padding-left: 0px;
-  }
 
   /*** 
 =============================================
@@ -1169,6 +1148,10 @@
 
   .accordion-box .accordion .accord-btn h4 {
     font-size: 16px;
+  }
+
+  .services .accordion-box .accordion .accord-content img {
+    margin-bottom: 5%;
   }
 
   .services .service-item {
