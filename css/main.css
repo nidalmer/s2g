@@ -1815,6 +1815,9 @@ ul,li {
   background: #fdc900;
   margin-bottom: 20px;
 }
+.service-detail.services .big-title.ndt h2:before {
+  top: 70px;
+}
 .services .service-content .top {
   margin-bottom: 10px;
   overflow: hidden;
@@ -2006,6 +2009,9 @@ ul,li {
 }
 .services .accordion-box .accordion .accord-content.with-text img {
   margin: 0 0 2% 5%;
+}
+.services .service-content .contact {
+  margin-top: 4%;
 }
 
 /*=============================================
